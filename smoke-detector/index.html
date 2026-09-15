@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5eee3" />
+    <title>Smoke Detector</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="detector-shell">
+      <div class="topline">
+        <span class="eyebrow">Emergency audio test</span>
+        <span class="status-chip"><span class="status-dot"></span>Ready</span>
+      </div>
+
+      <section class="detector-panel" aria-labelledby="page-title">
+        <div class="detector-mark" aria-hidden="true">
+          <div class="detector-ring detector-ring--outer"></div>
+          <div class="detector-ring detector-ring--inner"></div>
+          <div class="detector-center"></div>
+          <span class="detector-notch detector-notch--one"></span>
+          <span class="detector-notch detector-notch--two"></span>
+          <span class="detector-notch detector-notch--three"></span>
+        </div>
+
+        <div class="copy">
+          <p class="kicker">SOUND CHECK 01</p>
+          <h1 id="page-title">Smoke<br /><em>detector</em></h1>
+          <p class="description">Press the test button to sound the alarm. Turn your volume up first.</p>
+        </div>
+
+        <button class="test-button" id="test-button" type="button" aria-describedby="message">
+          <span class="button-icon" aria-hidden="true">↗</span>
+          <span>Test alarm</span>
+        </button>
+        <p class="message" id="message" role="status" aria-live="polite">System ready for a sound check.</p>
+      </section>
+
+      <footer>
+        <span>Audio source: MyInstants</span>
+        <a href="https://www.myinstants.com/" target="_blank" rel="noreferrer">Visit source <span aria-hidden="true">↗</span></a>
+      </footer>
+    </main>
+
+    <audio id="alarm-audio" preload="auto" src="https://www.myinstants.com/media/sounds/smoke-detector.mp3"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
