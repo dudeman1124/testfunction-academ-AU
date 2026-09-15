@@ -76,6 +76,19 @@ h1 em { color: var(--signal); font-style: normal; }
 .test-button:active, .test-button.is-playing { background: var(--signal-dark); box-shadow: 2px 2px 0 var(--ink); transform: translate(1px, 1px); }
 .button-icon { font-size: 1.2rem; line-height: 0; }
 .message { min-height: 1.2em; margin: 14px 0 0; color: var(--muted); font: 0.72rem 'DM Mono', monospace; }
+.automation-controls { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(180px, 0.7fr) minmax(300px, 1.3fr); align-items: end; gap: 22px 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+.control-heading p { margin: 0; }
+.control-heading .kicker { margin-bottom: 9px; }
+.control-heading > p:last-child { color: var(--muted); font-size: 0.9rem; }
+.control-row { display: flex; align-items: stretch; gap: 12px; }
+.seconds-field { display: flex; align-items: center; gap: 8px; padding: 0 12px; border: 1px solid var(--line); color: var(--muted); font: 0.72rem 'DM Mono', monospace; white-space: nowrap; }
+.seconds-field input { width: 66px; padding: 13px 5px; border: 0; border-left: 1px solid var(--line); border-right: 1px solid var(--line); color: var(--ink); background: transparent; font: 600 0.95rem 'Space Grotesk', sans-serif; text-align: center; }
+.seconds-field input:focus { outline: 2px solid var(--signal); outline-offset: -2px; }
+.control-button { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 16px; border: 2px solid var(--ink); border-radius: 0; color: var(--ink); background: transparent; font: 600 0.8rem 'Space Grotesk', sans-serif; cursor: pointer; transition: color 160ms ease, background 160ms ease, box-shadow 160ms ease, transform 160ms ease; }
+.control-button:hover, .control-button.is-active { color: var(--paper); background: var(--ink); box-shadow: 4px 4px 0 var(--signal); transform: translate(-2px, -2px); }
+.control-button--random { grid-column: 2; justify-self: start; }
+.control-button small { color: var(--muted); font: 0.65rem 'DM Mono', monospace; }
+.control-button:hover small, .control-button.is-active small { color: var(--yellow); }
 footer { padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); }
 footer a { color: var(--ink); text-decoration: none; }
 footer a:hover { color: var(--signal-dark); }
@@ -87,5 +100,9 @@ footer a:hover { color: var(--signal-dark); }
   h1 { font-size: clamp(4rem, 19vw, 6rem); }
   .description { margin-top: 26px; }
   .test-button { margin-top: 28px; }
+  .automation-controls { display: block; margin-top: 48px; }
+  .control-row { display: grid; grid-template-columns: 1fr; margin-top: 18px; }
+  .seconds-field { justify-content: center; min-height: 48px; }
+  .control-button, .control-button--random { width: 100%; margin-top: 10px; }
   footer { align-items: flex-start; gap: 12px; font-size: 0.62rem; }
 }

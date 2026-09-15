@@ -35,6 +35,29 @@
           <span>Test alarm</span>
         </button>
         <p class="message" id="message" role="status" aria-live="polite">System ready for a sound check.</p>
+
+        <div class="automation-controls" aria-label="Automatic beep controls">
+          <div class="control-heading">
+            <p class="kicker">AUTOMATION</p>
+            <p>Let the detector beep while you work.</p>
+          </div>
+          <div class="control-row">
+            <label class="seconds-field" for="interval-seconds">
+              <span>Every</span>
+              <input id="interval-seconds" type="number" min="1" max="3600" value="30" inputmode="numeric" />
+              <span>seconds</span>
+            </label>
+            <button class="control-button" id="fixed-interval-button" type="button" aria-pressed="false">
+              <span class="button-icon" aria-hidden="true">↻</span>
+              <span>Start set interval</span>
+            </button>
+          </div>
+          <button class="control-button control-button--random" id="random-interval-button" type="button" aria-pressed="false">
+            <span class="button-icon" aria-hidden="true">⌁</span>
+            <span>Start random interval</span>
+            <small>1–120 sec</small>
+          </button>
+        </div>
       </section>
 
       <footer>
